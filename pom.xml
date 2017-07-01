@@ -40,7 +40,6 @@
 			<scope>system</scope>
 		</dependency>
 
-
 		<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-json-plugin -->
 		<dependency>
 			<groupId>org.apache.struts</groupId>
