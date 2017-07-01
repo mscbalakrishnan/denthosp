@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.intellion.denthosp.model.Patient" table="PATIENT">
+        <id name="patientId" type="java.lang.Long">
+            <column name="PATIENT_ID" />
+            <generator class="increment" />
+        </id>
+        <property name="patientName" type="java.lang.String">
+            <column name="PATIENT_NAME" />
+        </property>
+        <property name="patientEmail" type="java.lang.String">
+            <column name="PATIENT_EMAIL" />
+        </property>
+        <property name="patientTelephone" type="java.lang.String">
+            <column name="PATIENT_TELEPHONE" />
+        </property>
+        
+        
+        
+        <property name="createdBy" type="java.lang.Long">
+            <column name="CreateBy" />
+        </property>
+        <property name="createdOn" type="java.sql.Date">
+            <column name="CreateOn" />
+        </property>
+        <property name="lastModifiedBy" type="java.lang.Long">
+            <column name="LastModifiedBy" />
+        </property>
+        <property name="lastModifiedOn" type="java.sql.Date">
+            <column name="LastModifiedDate" />
+        </property>
+         <property name="ipAddress" type="java.lang.String">
+            <column name="IPAddress" />
+        </property>
+        
+         <property name="deletedFlag" type="java.lang.Number">
+            <column name="DeletedFlag" />
+        </property>
+        <property name="organizationId" type="java.lang.Long">
+            <column name="OrganizationId" />
+        </property>
+   
+        
+    </class>
+    
+</hibernate-mapping>

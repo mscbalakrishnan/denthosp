@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<constant name="struts.devMode" value="false"></constant>
+
+<constant name="struts.convention.result.path" value="/"></constant>
+
+<package name="user" namespace="/" extends="struts-default,json-default">
+	<action name="home">
+		<result>/login.jsp</result>
+	</action>
+	
+	<action name="saveAppointment" class="com.intellion.denthosp.action.AppointmentAction" method="saveAppointment">
+		<result name="success">/pages/appoint_booking.html</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	
+	
+	
+	<action name="login" class="com.intellion.denthosp.action.LoginAction">
+		<result name="success">/welcome.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+
+</package>
+
+	<package name="json" namespace="/" extends="json-default">
+
+		<action name="loadSchedule" class="com.intellion.denthosp.action.AppointmentAction" method="loadSchedule">
+			<result name="success" type="json"></result>
+		</action>
+		
+	</package>
+
+</struts>
